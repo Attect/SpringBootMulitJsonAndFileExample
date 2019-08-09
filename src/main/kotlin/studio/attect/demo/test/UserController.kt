@@ -17,7 +17,7 @@ class UserController {
     private val logger: Logger = LoggerFactory.getLogger(this::class.java)
 
     @RequestMapping("/login")
-    fun update(@MultiRequestJson userLogin:UserLogin,file:MultipartFile):Any?{
+    fun login(@MultiRequestJson userLogin:UserLogin,file:MultipartFile):Any?{
         logger.info(userLogin.toString())
         logger.info("receiveFile:${file.originalFilename}")
         return null
